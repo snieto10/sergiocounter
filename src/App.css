@@ -36,3 +36,52 @@
     transform: rotate(360deg);
   }
 }
+
+.nav {
+  border: none;
+  background: lightgrey;
+}
+
+.inline {
+  display: inline;
+  margin-left: 100px;
+}
+
+.button {
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: rgb(220, 215, 215);
+}
+
+.button:active {
+  background-color: gray;
+}
+
+.counter-box {
+  background-color: rgb(125, 170, 248);
+  max-width: 30%;
+  margin-top: 3px;
+}
+
+.counter_center {
+  margin: 0 auto;
+}
+
+.number {
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.blue {
+  background-color: aqua;
+}
+
+.red {
+  background-color: lightcoral;
+}
