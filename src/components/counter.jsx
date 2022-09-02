@@ -2,7 +2,16 @@ import React, { Component } from "react";
 
 class Counter extends Component {
   state = {
-    count: 1,
+    count: 0,
+  };
+
+  // constructor() {
+  //   super();
+  //   this.handleIncrement = this.handleIncrement.bind(this);
+  // }
+
+  handleIncrement = () => {
+    this.setState({ count: this.state.count + 1 });
   };
 
   render() {
@@ -10,7 +19,9 @@ class Counter extends Component {
       <React.Fragment>
         <div className="counter-box">
           <span className={this.getColor()}>{this.state.count}</span>
-          <button className="button">+</button>
+          <button onClick={this.handleIncrement} className="button">
+            +
+          </button>
           <button className="button">-</button>
           <button className="button">Delete</button>
         </div>
@@ -24,7 +35,5 @@ class Counter extends Component {
     return classes;
   }
 }
-
-/*comment*/
 
 export default Counter;

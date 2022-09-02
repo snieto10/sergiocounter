@@ -40,6 +40,8 @@
 .nav {
   border: none;
   background: lightgrey;
+  margin-left: 50px;
+  border-radius: 5px;
 }
 
 .inline {
@@ -67,6 +69,8 @@
   background-color: rgb(125, 170, 248);
   max-width: 30%;
   margin-top: 3px;
+  margin-left: 50px;
+  border-radius: 5px;
 }
 
 .counter_center {
@@ -76,6 +80,7 @@
 .number {
   padding: 5px 10px;
   border-radius: 5px;
+  margin-left: 10px;
 }
 
 .blue {

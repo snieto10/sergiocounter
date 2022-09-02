@@ -2,13 +2,10 @@ import React, { Component } from "react";
 import Counter from "./counter";
 
 class Counters extends Component {
-    state = {}
+  state = {};
   render() {
     return (
       <React.Fragment>
-        <Counter />
-        <Counter />
-        <Counter />
         <Counter />
       </React.Fragment>
     );
