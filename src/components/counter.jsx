@@ -10,7 +10,8 @@ class Counter extends Component {
   //   this.handleIncrement = this.handleIncrement.bind(this);
   // }
 
-  handleIncrement = () => {
+  handleIncrement = (product) => {
+    console.log(product);
     this.setState({ count: this.state.count + 1 });
   };
 
@@ -19,7 +20,10 @@ class Counter extends Component {
       <React.Fragment>
         <div className="counter-box">
           <span className={this.getColor()}>{this.state.count}</span>
-          <button onClick={this.handleIncrement} className="button">
+          <button
+            onClick={() => this.handleIncrement({ id: 1 })}
+            className="button"
+          >
             +
           </button>
           <button className="button">-</button>
