@@ -25,4 +25,6 @@ class Counter extends Component {
   }
 }
 
+/*comment*/
+
 export default Counter;
