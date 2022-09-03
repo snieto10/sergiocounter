@@ -18,9 +18,27 @@ class Counters extends Component {
     this.setState({ counters });
   };
 
+  handleAdd = () => {
+    let addCounters = this.state.counters;
+    let b = [
+      ...addCounters,
+      {
+        id: addCounters[addCounters.length - 1].id + 1,
+        value: addCounters[addCounters.length - 1].value + 1,
+      },
+    ];
+    this.setState({ counters: b });
+  };
+
   render() {
     return (
       <React.Fragment>
+        <header className="counter-box">
+          <button className="button">RESET</button>
+          <button onClick={this.handleAdd} className="button">
+            ADD
+          </button>
+        </header>
         {this.state.counters.map((counter) => (
           <Counter
             key={counter.id}
