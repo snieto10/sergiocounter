@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class Counter extends Component {
   state = {
-    count: 0,
+    value: this.props.counter.value,
   };
 
   // constructor() {
@@ -11,25 +11,30 @@ class Counter extends Component {
   // }
 
   handleIncrement = () => {
-    this.setState({ count: this.state.count + 1 });
+    this.setState({ value: this.state.value + 1 });
   };
 
   handleDecrease = () => {
-    this.setState({ count: this.state.count - 1 });
+    this.setState({ value: this.state.value - 1 });
   };
 
   render() {
     return (
       <React.Fragment>
         <div className="counter-box">
-          <span className={this.getColor()}>{this.state.count}</span>
+          <span className={this.getColor()}>{this.state.value}</span>
           <button onClick={this.handleIncrement} className="button">
             +
           </button>
           <button onClick={this.handleDecrease} className="button">
             -
           </button>
-          <button className="button">Delete</button>
+          <button
+            onClick={() => this.props.onDelete(this.props.counter.id)}
+            className="button"
+          >
+            Delete
+          </button>
         </div>
       </React.Fragment>
     );
@@ -37,7 +42,7 @@ class Counter extends Component {
 
   getColor() {
     let classes = "number";
-    classes += this.state.count % 2 === 0 ? " blue" : " red";
+    classes += this.state.value % 2 === 0 ? " blue" : " red";
     return classes;
   }
 }
