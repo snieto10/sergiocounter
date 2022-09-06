@@ -60,22 +60,26 @@ class App extends Component {
         <NavBar
           counters={this.state.counters.filter((c) => c.value > 0).length}
         />
-        <Counters
-          counters={this.state.counters}
-          onReset={this.handleReset}
-          onIncrement={this.handleIncrement}
-          onDecrease={this.handleDecrease}
-          onDelete={this.handleDelete}
-          onAdd={this.handleAdd}
-        />
-        <RedCounters
-          counters={this.state.counters}
-          onReset={this.handleReset}
-          onIncrement={this.handleIncrement}
-          onDecrease={this.handleDecrease}
-          onDelete={this.handleDelete}
-          onAdd={this.handleAdd}
-        />
+        <div className="left">
+          <Counters
+            counters={this.state.counters}
+            onReset={this.handleReset}
+            onIncrement={this.handleIncrement}
+            onDecrease={this.handleDecrease}
+            onDelete={this.handleDelete}
+            onAdd={this.handleAdd}
+          />
+        </div>
+        <div className="right">
+          <RedCounters
+            counters={this.state.counters}
+            onReset={this.handleReset}
+            onIncrement={this.handleIncrement}
+            onDecrease={this.handleDecrease}
+            onDelete={this.handleDelete}
+            onAdd={this.handleAdd}
+          />
+        </div>
       </React.Fragment>
     );
   }
