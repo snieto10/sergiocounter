@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 class Counter extends Component {
   render() {
+    console.log("Counter -  Rendered");
     return (
       <React.Fragment>
         <div className="counter-box">
