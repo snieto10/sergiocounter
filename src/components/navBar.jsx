@@ -5,7 +5,7 @@ class NavBar extends Component {
     return (
       <React.Fragment>
         <nav className="nav">
-          <h1 className="inline">Counter Blue:</h1>
+          <h1 className="inline">Counter Blue: </h1>
           <h1 className="inline">Counter Red: </h1>
         </nav>
       </React.Fragment>
