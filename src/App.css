@@ -73,6 +73,14 @@
   margin-right: 50px;
   border-radius: 5px;
 }
+.counter-boxred {
+  background-color: rgb(255, 94, 99);
+  max-width: 50vw;
+  margin-top: 3px;
+  margin-left: 50px;
+  margin-right: 50px;
+  border-radius: 5px;
+}
 
 .counter_center {
   margin: 0 auto;

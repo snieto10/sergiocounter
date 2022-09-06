@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import "./App.css";
-import NavBar from "./components/navBar";
+import NavBar from "./components/navbar";
 import Counters from "./components/counters";
+import RedCounters from "./components/redcounters";
 
 class App extends Component {
   state = {
@@ -56,8 +57,18 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <NavBar />
+        <NavBar
+          counters={this.state.counters.filter((c) => c.value > 0).length}
+        />
         <Counters
+          counters={this.state.counters}
+          onReset={this.handleReset}
+          onIncrement={this.handleIncrement}
+          onDecrease={this.handleDecrease}
+          onDelete={this.handleDelete}
+          onAdd={this.handleAdd}
+        />
+        <RedCounters
           counters={this.state.counters}
           onReset={this.handleReset}
           onIncrement={this.handleIncrement}
